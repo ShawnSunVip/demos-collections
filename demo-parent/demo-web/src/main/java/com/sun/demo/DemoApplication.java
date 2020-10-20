@@ -9,11 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  **/
 
 @SpringBootApplication
-public class DemoApplication extends SpringBootServletInitializer implements CommandLineRunner {
+public class DemoApplication  {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-    @Override
+    /*@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
         return application.sources(SpringBootWebApplication.class);
     }
@@ -30,5 +30,5 @@ public class DemoApplication extends SpringBootServletInitializer implements Com
         {
             System.out.println(bean + " of Type :: " + appContext.getBean(bean).getClass());
         }
-    }
+    }*/
 }

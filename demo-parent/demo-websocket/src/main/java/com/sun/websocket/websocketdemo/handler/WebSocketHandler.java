@@ -17,6 +17,11 @@ public class WebSocketHandler {
         return key+"@"+name;
     }
 
+    /***
+     * 单播
+     * @param session
+     * @param msg
+     */
     public static void sendMessage(Session session,String msg){
         if(session ==null){
             return;
@@ -32,6 +37,10 @@ public class WebSocketHandler {
         }
     }
 
+    /**
+     * 广播
+     * @param message
+     */
     public static void sendMessageAll(String message){
         sessionMap().forEach((key, session) -> sendMessage(session, message));
     }
