@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>demo-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>demo-thread</module>
+        <module>demo-websocket</module>
+        <module>demo-tools</module>
+        <module>demo-design</module>
+        <module>demo-bug</module>
+        <module>demo-web</module>
+    </modules>
+
+    <properties>
+        <demo.version>${project.version}</demo.version>
+        <java.version>1.8</java.version>
+        <start.web.version>2.3.4.RELEASE</start.web.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>demo-bug</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>demo-design</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>demo-thread</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>demo-tools</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.example</groupId>
+                <artifactId>demo-websocket</artifactId>
+                <version>${demo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${start.web.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+   <!-- 默认配置JavaCompiler 版本1.8 防止 Language Level 自动变化-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
