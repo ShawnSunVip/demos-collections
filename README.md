@@ -3,7 +3,7 @@
 
 demo合集
 
-1.thread-demo   多线程相关demo
+1.tdemo-thread   多线程相关demo
 
      JUC相关内容
       
@@ -15,12 +15,13 @@ demo合集
              Callable
              Threadpool
 
-2.websocket-demo  websocket相关demo
+2.demo-websocket  websocket相关demo
 
-3.tool-demo   一些新工具测试demo
+3.demo-tools   一些新工具测试demo
 
-4.designPattern-demo  设计模式
-
+4.demo-design  设计模式
+     
+   七大原则
    1）单一职责原则
    2）接口隔离原则
    3）依赖倒置原则
@@ -28,6 +29,9 @@ demo合集
    5）开闭原则
    6）迪米特法原则
    7）合成复用原则
+   
+   二十三设计模式
+    1）
 
 
 
