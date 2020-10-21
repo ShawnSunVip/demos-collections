@@ -22,6 +22,5 @@ public class WebSocketController {
     @RequestMapping(value = "/saymsg", method = RequestMethod.GET)
     public String sayMsg(@RequestParam("msg") String msg){
         return webSocketService.sendMsg(msg);
-
     }
 }

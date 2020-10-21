@@ -85,3 +85,5 @@ demo-parent/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotation
 demo-parent/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml
 demo-parent/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml
 demo-parent/.idea/encodings.xml
+demo-parent/demo-websocket/target/
+demo-parent/demo-web/target/
