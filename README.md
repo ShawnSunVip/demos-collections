@@ -3,7 +3,7 @@
 
 demo合集
 
-1.tdemo-thread   多线程相关demo
+1.demo-thread   多线程相关demo
 
      JUC相关内容
       
