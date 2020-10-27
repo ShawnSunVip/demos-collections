@@ -1,4 +1,4 @@
-package com.sun.demo.service;
+package com.sun.websocket.websocketdemo.service;
 
 /**
  * @author shawn

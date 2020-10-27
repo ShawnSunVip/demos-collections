@@ -1,6 +1,6 @@
-package com.sun.demo.controller;
+package com.sun.websocket.websocketdemo.controller;
 
-import com.sun.demo.service.WebSocketService;
+import com.sun.websocket.websocketdemo.service.WebSocketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

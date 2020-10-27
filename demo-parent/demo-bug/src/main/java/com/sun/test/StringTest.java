@@ -7,13 +7,18 @@ package com.sun.test;
  */
 public class StringTest {
     public static void main(String[] args) {
-        System.out.println("6 ^ 1="+(109799392 & 16));
-        int in = highestOneBit(8);
-        System.out.println(in);
+        String str = "world";
+        switch (str) {
+            case "hello":
+                System.out.println("hello");
+                break;
+            case "world":
+                System.out.println("world");
+                break;
+            default:
+                break;
+        }
 
-    }
-    public static int highestOneBit(int num){
-        return num>16?16:(num > 1)?Integer.highestOneBit((num)<<1):1;
     }
 }
 

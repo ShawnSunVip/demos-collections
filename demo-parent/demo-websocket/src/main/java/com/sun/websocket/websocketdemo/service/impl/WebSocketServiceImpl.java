@@ -1,9 +1,8 @@
-package com.sun.demo.service.impl;
+package com.sun.websocket.websocketdemo.service.impl;
 
-import com.sun.demo.service.WebSocketService;
 import com.sun.websocket.websocketdemo.handler.WebSocketHandler;
+import com.sun.websocket.websocketdemo.service.WebSocketService;
 import com.sun.websocket.websocketdemo.websocket.WebsocketPool;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
@@ -18,11 +17,12 @@ import java.util.Map;
 @Service
 public class WebSocketServiceImpl  implements WebSocketService {
 
-
+    private WebsocketPool websocketPool;
+    private WebSocketHandler webSocketHandler;
 
     @Override
     public String sendMsg(String msg) {
- /*       Map<String, Session> sessions = websocketPool.sessionMap();
+        Map<String, Session> sessions = websocketPool.sessionMap();
         if (!CollectionUtils.isEmpty(sessions)){
             Session session =sessions.get("kis@sun");
             if(session !=null){
@@ -30,7 +30,7 @@ public class WebSocketServiceImpl  implements WebSocketService {
                 return "服务器下发指令："+msg;
             }
 
-        }*/
+        }
         return "";
     }
 }
