@@ -19,7 +19,7 @@ public class SendMsgController {
     private RabbitTemplate rabbitTemplate;
 
     /**
-     * 测试
+     * 测试 http://localhost:8081/sendmsg?msg=springboot-rabbitmq-producer&key=item.springboot-rabbitmq
      */
     @GetMapping("/sendmsg")
     public String sendMsg(@RequestParam String msg, @RequestParam String key){
