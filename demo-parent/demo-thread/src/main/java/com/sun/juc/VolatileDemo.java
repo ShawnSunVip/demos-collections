@@ -20,13 +20,13 @@ public class VolatileDemo {
     public static void main(String[] args) {
         //验证volatile的可见性
         System.out.println("验证volatile的可见性");
-        verifyVisibility();
+        //verifyVisibility();
 
         System.out.println("——————————————————————————————————————");
 
         System.out.println("验证原子性");
         //验证原子性
-        verifyAtomic();
+        //verifyAtomic();
 
         System.out.println("——————————————————————————————————————");
 
@@ -107,7 +107,7 @@ public class VolatileDemo {
 
 class MyData {
     //int num = 0;
-    volatile int num = 0;
+     int num = 0;
 
     AtomicInteger atomicNum = new AtomicInteger(0);
 
@@ -130,7 +130,7 @@ class MyData {
 
 class MyData2 {
     int a = 0;
-    volatile boolean flag = false;
+    boolean flag = false;
 
     public void method01() {
         a = 1;
