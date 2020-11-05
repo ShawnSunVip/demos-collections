@@ -1,4 +1,4 @@
-package reflection;
+package com.sun.reflection;
 
 /**
  * @author sunxiang
@@ -7,7 +7,7 @@ package reflection;
 public class ReflectionDemo {
     public static void main(String[] args) throws ClassNotFoundException{
         // 获取
-        Class<?> aClass = Class.forName("reflection.A");
+        Class<?> aClass = Class.forName("com.sun.reflection.A");
         Class<A> aClass1 = A.class;
         System.out.println("ss");
     }

@@ -13,7 +13,7 @@
         <module>demo-websocket</module>
         <module>demo-tools</module>
         <module>demo-design</module>
-        <module>demo-bug</module>
+        <module>demo-test</module>
         <module>demo-web</module>
     </modules>
 

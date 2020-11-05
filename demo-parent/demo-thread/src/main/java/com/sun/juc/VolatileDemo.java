@@ -20,7 +20,7 @@ public class VolatileDemo {
     public static void main(String[] args) {
         //验证volatile的可见性
         System.out.println("验证volatile的可见性");
-        //verifyVisibility();
+        verifyVisibility();
 
         System.out.println("——————————————————————————————————————");
 
@@ -31,7 +31,7 @@ public class VolatileDemo {
         System.out.println("——————————————————————————————————————");
 
         System.out.println("验证禁止指令重排");
-        verifyRearrangement();
+        //verifyRearrangement();
     }
 
     /**

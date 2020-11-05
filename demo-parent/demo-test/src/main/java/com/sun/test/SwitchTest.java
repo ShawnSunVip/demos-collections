@@ -5,7 +5,7 @@ package com.sun.test;
  * @descript
  * @create 2020-10-25 10:24 上午
  */
-public class StringTest {
+public class SwitchTest {
     public static void main(String[] args) {
         String str = "world";
         switch (str) {
