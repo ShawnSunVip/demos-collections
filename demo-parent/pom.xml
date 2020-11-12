@@ -15,6 +15,7 @@
         <module>demo-design</module>
         <module>demo-test</module>
         <module>demo-web</module>
+        <module>demo-annotation</module>
     </modules>
 
     <properties>
