@@ -16,18 +16,17 @@ public class VolatileTest {
         A myData = new A();
         new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "\t start");
-            myData.addNumTo10();
+
             // 暂停线程
             try {
                 TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
+            myData.addNumTo10();
             System.out.println(Thread.currentThread().getName() + "\t update num value:" + myData.num);
         }, "A").start();
 
-        try{TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
         while (myData.num == 0) {
             //main线程等待循环，直到num值不为0
             //1。如果不加volatile main线程会循环死
@@ -39,7 +38,7 @@ public class VolatileTest {
 }
 
 class A {
-    int num =1;
+    int num =0;
     public void addNumTo10() {
         this.num = 10;
     }
