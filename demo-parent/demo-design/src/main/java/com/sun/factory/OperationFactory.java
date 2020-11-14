@@ -2,6 +2,7 @@ package com.sun.factory;
 
 /**
  * @author sunxiang
+ * 计数工厂
  * @date 2020-11-13 12:00
  **/
 public class OperationFactory {

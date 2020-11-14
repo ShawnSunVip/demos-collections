@@ -2,6 +2,7 @@ package com.sun.factory;
 
 /**
  * @author sunxiang
+ * 除法
  * @date 2020-11-13 12:06
  **/
 public class OperationDiv extends Operation {

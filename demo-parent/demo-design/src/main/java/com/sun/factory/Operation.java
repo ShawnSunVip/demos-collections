@@ -2,6 +2,7 @@ package com.sun.factory;
 
 /**
  * @author sunxiang
+ * 基础操作类
  * @date 2020-11-13 12:00
  **/
 public class Operation {
