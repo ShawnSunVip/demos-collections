@@ -4,8 +4,11 @@ import com.sun.spring.annotation.clasz.Person;
 import com.sun.spring.annotation.config.MyConfig;
 import com.sun.spring.annotation.config.MyConfig2;
 import com.sun.spring.annotation.config.MyConfig3;
+import com.sun.spring.annotation.config.MyConfig4;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import javax.sql.DataSource;
 
 /**
  * @author shawn
@@ -81,7 +84,14 @@ public class AnnocationDemo01 {
     }
 
     /**
-     *
+     * 配置类3 验证Bean的生命周期
+     * Bean的生命周期
+     *     创建-》初始化-》销毁
+     * 三种方式
+     *  1）指定初始化方法 init 和 destory
+     *  2）InitializingBean和DisposableBean接口实现
+     *  3）@PostConstruct 和@PreDestory注解
+     *  4）BeanPostProceor后置处理器
      */
     @Test
     public void Test03(){
@@ -89,6 +99,18 @@ public class AnnocationDemo01 {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyConfig3.class);
         System.out.println("ioc创建完成。。。");
 
+        applicationContext.close();
+    }
+
+    @Test
+    public void Test04(){
+        // 注解容器
+        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(MyConfig4.class);
+        System.out.println("ioc创建完成。。。");
+        String[] beanNamesForType = applicationContext.getBeanNamesForType(DataSource.class);
+        for (String name: beanNamesForType){
+            System.out.println(name);
+        }
         applicationContext.close();
     }
 
