@@ -1,4 +1,4 @@
-package com.sun.spring.annotation.config;
+package com.sun.spring.annotation.selector;
 
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;

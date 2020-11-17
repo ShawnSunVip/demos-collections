@@ -23,7 +23,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(MyBeanPostProcessor.class)
-public class MyConfig3 {
+public class MyBeanConfig {
 
     @Bean(initMethod = "init", destroyMethod = "detory")
     public Cat cat(){

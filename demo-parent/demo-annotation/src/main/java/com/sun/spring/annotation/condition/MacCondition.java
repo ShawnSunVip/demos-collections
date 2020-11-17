@@ -1,4 +1,4 @@
-package com.sun.spring.annotation.config;
+package com.sun.spring.annotation.condition;
 
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -13,7 +13,7 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
  * 基于@Condition 自定义条件bean容器——windows
  * @create 2020-11-15 7:09 下午
  */
-public class WindowsCondition implements Condition {
+public class MacCondition implements Condition {
 
     /**
      *
@@ -33,7 +33,7 @@ public class WindowsCondition implements Condition {
         BeanDefinitionRegistry registry = conditionContext.getRegistry();
 
         String property = environment.getProperty("os.name");
-        if (property.contains("Windows")){
+        if (property.contains("Mac")){
             return true;
         }
         return false;

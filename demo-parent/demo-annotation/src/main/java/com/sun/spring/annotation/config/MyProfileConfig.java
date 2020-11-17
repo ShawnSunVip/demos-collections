@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.EmbeddedValueResolverAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.util.StringValueResolver;
 
@@ -15,7 +16,8 @@ import javax.sql.DataSource;
  * @descript
  * 配置类4 @Profile
  * Profile 动态激活和切换一系列组件功能
- *
+ *  写在方法上表示只有当前环境激活才会注册这个bean
+ *  写在类上表示只有当前环境激活才会注册这个配置文件
  * @PropertySource默认只支持properties文件
  * 怎么使其支持yml文件
  * 通过继承DefaultPropertySourceFactory
@@ -25,8 +27,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @PropertySource("classpath:/dbconfig.properties")
-//@Profile(value = {"dataSourcesDev"})
-public class MyConfig4 implements EmbeddedValueResolverAware {
+public class MyProfileConfig implements EmbeddedValueResolverAware {
 
     @Value("${mydb.user}")
     private String user;
@@ -35,12 +36,14 @@ public class MyConfig4 implements EmbeddedValueResolverAware {
 
     private String driveClass;
 
+    @Profile("dev")
     @Bean("dataSourcesDev")
     public DataSource dataSourcesDev() {
         System.out.println("这是开发环境:user:"+user+",driveClass:"+driveClass);
         return new DataSourceDev();
     }
 
+    @Profile("prod")
     @Bean("dataSourcesProd")
     public DataSource dataSourcesProd() {
         System.out.println("这是生产环境:user:"+user+",driveClass:"+driveClass);

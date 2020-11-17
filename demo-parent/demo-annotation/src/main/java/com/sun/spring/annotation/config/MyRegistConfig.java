@@ -4,6 +4,10 @@ import com.sun.spring.annotation.clasz.Cat;
 import com.sun.spring.annotation.clasz.Dog;
 import com.sun.spring.annotation.clasz.Person;
 import com.sun.spring.annotation.clasz.SnakeFactoryBean;
+import com.sun.spring.annotation.condition.MacCondition;
+import com.sun.spring.annotation.condition.WindowsCondition;
+import com.sun.spring.annotation.registrar.MyImportBeanDefinitionRegistrar;
+import com.sun.spring.annotation.selector.MyImportSelector;
 import org.springframework.context.annotation.*;
 
 /**
@@ -27,8 +31,8 @@ import org.springframework.context.annotation.*;
  * @create 2020-11-15 6:49 下午
  */
 @Configuration
-@Import({Dog.class,MyImportSelector.class,MyImportBeanDefinitionRegistrar.class})
-public class MyConfig2 {
+@Import({Dog.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class})
+public class MyRegistConfig {
 
     @Bean("person")
     @Scope("prototype")

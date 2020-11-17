@@ -1,4 +1,4 @@
-package com.sun.spring.annotation.config;
+package com.sun.spring.annotation.filter;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.type.AnnotationMetadata;

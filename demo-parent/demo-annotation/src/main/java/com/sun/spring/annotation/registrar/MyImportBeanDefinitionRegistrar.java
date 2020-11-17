@@ -1,4 +1,4 @@
-package com.sun.spring.annotation.config;
+package com.sun.spring.annotation.registrar;
 
 import com.sun.spring.annotation.clasz.Panda;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;

@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(value = "com.sun.spring.annotation")
-public class MyConfig {
+public class MyScanConfig {
 
     @Bean("person")
     public Person createPerson(){
