@@ -19,6 +19,9 @@ public class PersonConfig {
     @Value("${person.age}")
     private Integer age;
 
+    public PersonConfig() {
+    }
+
     public String getName() {
         return name;
     }
@@ -33,5 +36,13 @@ public class PersonConfig {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonConfig{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }

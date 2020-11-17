@@ -95,3 +95,4 @@ demo-parent/rabbitmq-produce/.mvn/
 demo-parent/rabbitmq-produce/mvnw
 demo-parent/rabbitmq-comsume/mvnw
 demo-parent/demo-test/target/
+demo-parent/demo-annotation/target/classes/

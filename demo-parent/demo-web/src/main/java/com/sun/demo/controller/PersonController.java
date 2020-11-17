@@ -1,6 +1,7 @@
 package com.sun.demo.controller;
 
-import com.sun.demo.model.Person;
+import com.sun.demo.config.PersonConfig;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PersonController {
 
+    @Autowired
+    private PersonConfig personConfig;
+
     @RequestMapping("/person")
     public String showPerson(){
-        Person person =new Person();
-        return person.toString();
+        return personConfig.toString();
     }
 }
