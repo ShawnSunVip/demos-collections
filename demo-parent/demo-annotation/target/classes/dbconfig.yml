@@ -1,4 +1,0 @@
-mydb:
-  user: root
-  password: 123
-  driverClass: com.mysql.jdbc.Driver

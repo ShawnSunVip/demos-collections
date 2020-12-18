@@ -1,4 +1,32 @@
 server:
   port: 8080
 
-debug: false
+
+
+spring:
+  redis:
+    #数据库索引
+    database: 0
+    host: 47.103.96.71
+    port: 6379
+    lettuce:
+      pool:
+        #最大连接数
+        max-active: 100
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: 5000
+        #最大空闲
+        max-idle: 500
+        #最小空闲
+        min-idle: 8
+    #连接超时时间
+    timeout: 10000
+
+jedis :
+  pool :
+    host : 47.103.96.71
+    port : 6379
+    config :
+      maxTotal: 1000
+      maxIdle: 1000
+      maxWaitMillis : 100000
