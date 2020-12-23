@@ -96,3 +96,4 @@ demo-parent/rabbitmq-produce/mvnw
 demo-parent/rabbitmq-comsume/mvnw
 demo-parent/demo-test/target/
 demo-parent/demo-annotation/target/classes/
+demo-parent/demo-tools/target/
