@@ -16,7 +16,6 @@
         <module>demo-test</module>
         <module>demo-web</module>
         <module>demo-annotation</module>
-        <module>demo-spring-websocket</module>
         <module>demo-websocket-spring</module>
         <module>demo-websocket-tio</module>
         <module>demo-websocket-stomp</module>
