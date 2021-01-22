@@ -97,3 +97,4 @@ demo-parent/rabbitmq-comsume/mvnw
 demo-parent/demo-test/target/
 demo-parent/demo-annotation/target/classes/
 demo-parent/demo-tools/target/
+demo-parent/demo-websocket-spring/target/
