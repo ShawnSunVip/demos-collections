@@ -7,7 +7,7 @@ spring:
   redis:
     #数据库索引
     database: 0
-    host: 47.103.96.71
+    host: 127.0.0.1
     port: 6379
     lettuce:
       pool:
@@ -21,11 +21,13 @@ spring:
         min-idle: 8
     #连接超时时间
     timeout: 10000
+    password: 123456
 
 jedis :
   pool :
-    host : 47.103.96.71
+    host : 127.0.0.1
     port : 6379
+    password: 123456
     config :
       maxTotal: 1000
       maxIdle: 1000
