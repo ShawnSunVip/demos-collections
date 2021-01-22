@@ -7,8 +7,8 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 秒杀案例——中级
- * 解决超卖
+ * 秒杀案例——高级
+ * 解决超卖和遗留
  * @author sunxiang
  * @date 2021-01-22 12:47
  **/

@@ -20,7 +20,7 @@ public class JedisPoolUtils {
                     jedisPoolConfig.setMaxTotal(1000);
                     jedisPoolConfig.setMaxIdle(10);
                     jedisPoolConfig.setBlockWhenExhausted(true);
-                    jedisPool = new JedisPool(jedisPoolConfig, "127.0.0.1", 6379,1000,"123456");
+                    jedisPool = new JedisPool(jedisPoolConfig, "47.103.96.71", 6379,1000,"Sun123!@#");
                 }
             }
         }
